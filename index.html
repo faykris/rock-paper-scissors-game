@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 13px; text-align: center; background-color: hsl(229, 64%, 46%); height: 6rem; display: flex; align-items: center; justify-content: center; color: aliceblue;}
+    .attribution a { color: hsl(40, 84%, 53%); transition: all .3s; margin-left: .2rem;}
+    .attribution a:hover { color: hsl(349, 70%, 56%);}
+  </style>
+</head>
+<body>
+
+  <div id="score-panel" class="score-panel">
+    <div class="score-card">
+      <div class="options">
+        <h2>ROCK</h2>
+        <h2>PAPER</h2>
+        <h2>SCISSORS</h2>
+      </div>
+      <div class="score">
+        <h2>SCORE</h2>
+        <h2 id="score-number">0</h2>
+      </div>
+    </div>
+  </div>
+
+  <div id="option-selector" class="option-selector">
+    <div class="option-container">
+      <img src="images/bg-triangle.svg" alt="trinagle">
+      <div class="option paper" onclick="selectOption(1)">
+        <div class="option-bg">
+          <img src="images/icon-paper.svg" alt="paper" class="option-icon">
+        </div>   
+      </div>
+      <div class="option rock" onclick="selectOption(2)">
+        <div class="option-bg">
+          <img src="images/icon-rock.svg" alt="rock" class="option-icon">
+        </div>   
+      </div>
+      <div class="option scissors" onclick="selectOption(3)">
+        <div class="option-bg">
+          <img src="images/icon-scissors.svg" alt="rock" class="option-icon">
+        </div>   
+      </div>   
+    </div>
+  </div>
+
+  <div id="option-match" class="option-match">
+    <div class="option-container">
+      
+      <div class="match-container">
+        <h3>YOU PICKED</h3>
+        <div id="selected-option" class="match">
+          <div class="option-bg">
+            <img id="selected-img" src="images/icon-paper.svg" alt="paper" class="option-icon">
+          </div>   
+        </div>
+      </div>
+      
+
+      <div class="match-result">
+        <h1 id="result-text">DRAW</h1>
+        <button id="play-again" type="button" onclick="playAgain()">
+          PLAY AGAIN
+        </button>
+      </div>
+
+      <div class="match-container">
+        <h3>THE HOUSE PICKED</h3>
+        <div id="computer-option" class="match">
+          <div class="option-bg">
+            <img id="computer-img" src="images/icon-paper.svg" alt="paper" class="option-icon">
+          </div>   
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by 
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by 
+    <a href="https://github.com/faykris" target="_blank">Cristian Pinzón</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
